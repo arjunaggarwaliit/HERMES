@@ -146,6 +146,3 @@ COSMOS showed lower tail latency on routing queries than the CH baseline, and st
 
 `rust-spcs` bundles the `fast_paths` crate by easbar (https://github.com/easbar/fast_paths), licensed under MIT/Apache-2.0, and is used only as the Contraction Hierarchies baseline for benchmarking. It is not part of the COSMOS implementation itself; see `rust-spcs/LICENSE-MIT` and `rust-spcs/LICENSE-APACHE` for its license terms.
 
-## Origin
-
-COSMOS was originally developed as a B.Tech capstone project. This copy has been reorganized and documented for personal portfolio use.
