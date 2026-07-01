@@ -43,12 +43,10 @@ COSMOS/
 ├── go-spcs/                         Main Go implementation of COSMOS
 │   ├── spcs/                        Entry point and example programs
 │   ├── dch/                         Core graph processing and routing engine
-│   │   ├── utils/                   Graph structures, Dijkstra, contraction,
-│   │   │                            import/export utilities, heaps, etc.
+│   │   ├── utils/                   Graph structures, Dijkstra, contraction, import/export utilities, heaps, etc.
 │   │   └── tests/                   Unit tests for core algorithms
 │   └── demo/                        Experimental framework and evaluation suite
-│       ├── src/                     Partitioning, MLP, routing, update processing,
-│       │                            and concurrency control
+│       ├── src/                     Partitioning, MLP, routing, update processing, and concurrency control
 │       ├── simulator/               Workload and concurrency simulators
 │       ├── runnable/                Executable entry points and benchmark configurations
 │       ├── analyzers/               Python scripts for log analysis and visualization
