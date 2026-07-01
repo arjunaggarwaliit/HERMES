@@ -36,34 +36,40 @@ Updates to the network (new edges, changed weights, closures) are batched over a
 
 COSMOS uses the Delta Phase batching described above together with Two-Phase Locking (2PL) to guarantee serializable execution when queries and updates run concurrently. Locks are acquired during a growing phase and released during a shrinking phase, which is the standard mechanism for guaranteeing conflict serializability in database systems, applied here to graph partitions instead of database rows.
 
-## Repository structure
+##  Repository Structure
 
-```
+```text
 COSMOS/
-├── go-spcs/                     Primary Go implementation
-│   ├── spcs/                    Entry point / sample usage
-│   ├── dch/                     Core algorithms: partitioning, contraction, routing, isochrones
-│   │   ├── utils/               Graph, vertex, heap, contraction, dijkstra, import/export
-│   │   └── tests/               Unit tests for the above
-│   └── demo/                    End to end demo, simulator, and analysis tooling
-│       ├── src/                 Partitioning, MLP, routing/update query logic, concurrency
-│       ├── simulator/           Workload simulators for routing and concurrency tests
-│       ├── runnable/            Main entry point, run configs, and query sets
-│       ├── analyzers/           Python scripts that turn raw run logs into plots
-│       └── tests/               Integration tests
-├── java-spcs/                   Java implementation (Gradle project)
-│   └── app/src/main/java/csps/  Graph, vertex, edge, partition, and algorithm classes
-├── cpp-spcs/                    C++ implementation used for early experimentation
-│   ├── src/                     Core source and headers
-│   ├── test/                    Sample graph inputs
-│   └── plot/                    Gnuplot scripts and result plots
-├── rust-spcs/                   Vendored third party library ("fast_paths" by easbar,
-│                                MIT/Apache-2.0), used as the Contraction Hierarchies
-│                                baseline that COSMOS is benchmarked against.
-├── datasets/                    Road network datasets and a format conversion script
-└── go.work                      Go workspace file tying the go-spcs modules together
+├── go-spcs/                         Main Go implementation of COSMOS
+│   ├── spcs/                        Entry point and example programs
+│   ├── dch/                         Core graph processing and routing engine
+│   │   ├── utils/                   Graph structures, Dijkstra, contraction,
+│   │   │                            import/export utilities, heaps, etc.
+│   │   └── tests/                   Unit tests for core algorithms
+│   └── demo/                        Experimental framework and evaluation suite
+│       ├── src/                     Partitioning, MLP, routing, update processing,
+│       │                            and concurrency control
+│       ├── simulator/               Workload and concurrency simulators
+│       ├── runnable/                Executable entry points and benchmark configurations
+│       ├── analyzers/               Python scripts for log analysis and visualization
+│       └── tests/                   End-to-end integration tests
+│
+├── java-spcs/                       Java implementation (Gradle project)
+│   └── app/src/main/java/csps/      Graph data structures and algorithm implementations
+│
+├── cpp-spcs/                        Early C++ prototype and experimental implementation
+│   ├── src/                         Source code and headers
+│   ├── test/                        Sample graph datasets
+│   └── plot/                        Gnuplot scripts and benchmark visualizations
+│
+├── rust-spcs/                       Vendored implementation of the "fast_paths" library
+│                                    (MIT/Apache-2.0) used as the Contraction
+│                                    Hierarchies baseline for benchmarking
+│
+├── datasets/                        Road network datasets and preprocessing utilities
+│
+└── go.work                          Go workspace configuration for the Go modules
 ```
-
 ## Getting started
 
 ### Go implementation (primary)
