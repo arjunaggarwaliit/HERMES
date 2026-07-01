@@ -82,7 +82,7 @@ if __name__ == "__main__":
     
     dirs_map = {
         'ch': "..\\..\\runnable\\results\\graph_CH\\routing",
-        'cosmos': "..\\..\\runnable\\results\\graph1\\routing",
+        'hermes': "..\\..\\runnable\\results\\graph1\\routing",
     }
 
     output = 'graphs/'

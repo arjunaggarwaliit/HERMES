@@ -90,7 +90,7 @@ def create_confusion_matrix(dirs_map, results_dir):
     Create and save confusion matrix for cost comparison.
     """
     df1 = dirs_map['ch']
-    df2 = dirs_map['cosmos']
+    df2 = dirs_map['hermes']
 
     # Classify costs as match or mismatch
     expected_costs = df1['ExpectedCost'].values
@@ -111,7 +111,7 @@ def create_confusion_matrix(dirs_map, results_dir):
     ax1.set_ylabel('Expected Cost')
 
     ax2.matshow(cm2, cmap='Blues')
-    ax2.set_title('cosmos')
+    ax2.set_title('hermes')
     ax2.set_xlabel('Actual Cost')
     ax2.set_ylabel('Expected Cost')
 
@@ -146,7 +146,7 @@ def main(dirs_map, output_dir):
 if __name__ == "__main__":
     dirs_map = {
         'ch': "..\\..\\runnable\\results\\graph_CH\\routing",
-        'cosmos': "..\\..\\runnable\\results\\graph1\\routing",
+        'hermes': "..\\..\\runnable\\results\\graph1\\routing",
     }
 
     output = 'graphs/'
