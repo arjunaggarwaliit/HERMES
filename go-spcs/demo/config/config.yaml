@@ -1,0 +1,44 @@
+configs:
+
+- name : graph1
+  type : spcs
+  results_path: results/graph1/
+  mlp:
+    graphfile: '../../../datasets/master/data_100000.txt'
+    levels: 13
+
+  include:
+    # - routing_test
+    - concurrency_test
+
+  tests:
+    - name: routing_test
+      routing_queires_path: 'queries/routing_queries_730.csv'
+      # update_queries_path: 'None'
+
+    - name: concurrency_test
+      routing_queires_path: queries/routing_queries_730.csv
+      update_queries_path: queries/update_queries_680.csv
+
+      
+
+
+# - name : graphCH 
+#   type : dch
+#   results_path: results/graph_CH/
+#   mlp:
+#     graphfile: '../../../datasets/master/data_100000.txt'
+#     levels: 11
+
+#   include:
+#     - routing_test
+#     # - stress_test
+
+#   tests:
+#     - name: routing_test
+#       routing_queires_path: queries/routing_queries_730.csv
+#       # update_queries_path: None
+      
+
+
+

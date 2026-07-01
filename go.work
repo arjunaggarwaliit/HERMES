@@ -1,0 +1,11 @@
+go 1.21.6
+
+use (
+	./go-spcs/dch/tests
+	./go-spcs/dch/utils
+	./go-spcs/spcs
+	./go-spcs/demo/runnable
+	./go-spcs/demo/src
+	./go-spcs/demo/simulator
+	./go-spcs/demo/tests
+)

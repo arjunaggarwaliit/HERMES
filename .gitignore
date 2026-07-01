@@ -1,0 +1,22 @@
+*.o
+edp
+edp_test
+edp_main
+.DS_Store
+*.eps
+devenv
+# Ignore Gradle project-specific cache directory
+.gradle
+
+# Ignore Gradle build output directory
+build
+*.hprof
+.vscode
+
+# Datasets files
+*.gr
+*.txt
+*.dot
+*.json
+*.csv
+*.log

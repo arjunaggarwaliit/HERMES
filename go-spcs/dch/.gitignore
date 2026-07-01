@@ -1,0 +1,13 @@
+.vscode
+benchmark_graph.csv
+/osm_data
+/data/export_pgrouting.csv
+/data/export_pgrouting_vertices.csv
+/data/export_pgrouting_contractions.csv
+/data/export_pgrouting_shortcuts.csv
+new.txt
+old.txt
+cmd/osm2ch/*.csv
+*.exe
+benchmarks/*.txt
+/cmd
