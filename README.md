@@ -40,29 +40,28 @@ COSMOS uses the Delta Phase batching described above together with Two-Phase Loc
 
 ```
 COSMOS/
-├── go-spcs/            Primary Go implementation
-│   ├── spcs/           Entry point / sample usage
-│   ├── dch/             Core algorithms: partitioning, contraction, routing, isochrones
-│   │   ├── utils/       Graph, vertex, heap, contraction, dijkstra, import/export
-│   │   └── tests/       Unit tests for the above
-│   └── demo/            End to end demo, simulator, and analysis tooling
-│       ├── src/         Partitioning, MLP, routing/update query logic, concurrency
-│       ├── simulator/   Workload simulators for routing and concurrency tests
-│       ├── runnable/    Main entry point, run configs, and query sets
-│       ├── analyzers/   Python scripts that turn raw run logs into plots
-│       └── tests/       Integration tests
-├── java-spcs/           Java implementation (Gradle project)
-│   └── app/src/main/java/csps/   Graph, vertex, edge, partition, and algorithm classes
-├── cpp-spcs/            C++ implementation used for early experimentation
-│   ├── src/              Core source and headers
-│   ├── test/             Sample graph inputs
-│   └── plot/             Gnuplot scripts and result plots
-├── rust-spcs/            Vendored third party library ("fast_paths" by easbar,
-│                          MIT/Apache-2.0), used as the Contraction Hierarchies
-│                          baseline that COSMOS is benchmarked against. This is
-│                          not COSMOS code; see Third party components below.
-├── datasets/             Road network datasets and a format conversion script
-└── go.work               Go workspace file tying the go-spcs modules together
+├── go-spcs/                     Primary Go implementation
+│   ├── spcs/                    Entry point / sample usage
+│   ├── dch/                     Core algorithms: partitioning, contraction, routing, isochrones
+│   │   ├── utils/               Graph, vertex, heap, contraction, dijkstra, import/export
+│   │   └── tests/               Unit tests for the above
+│   └── demo/                    End to end demo, simulator, and analysis tooling
+│       ├── src/                 Partitioning, MLP, routing/update query logic, concurrency
+│       ├── simulator/           Workload simulators for routing and concurrency tests
+│       ├── runnable/            Main entry point, run configs, and query sets
+│       ├── analyzers/           Python scripts that turn raw run logs into plots
+│       └── tests/               Integration tests
+├── java-spcs/                   Java implementation (Gradle project)
+│   └── app/src/main/java/csps/  Graph, vertex, edge, partition, and algorithm classes
+├── cpp-spcs/                    C++ implementation used for early experimentation
+│   ├── src/                     Core source and headers
+│   ├── test/                    Sample graph inputs
+│   └── plot/                    Gnuplot scripts and result plots
+├── rust-spcs/                   Vendored third party library ("fast_paths" by easbar,
+│                                MIT/Apache-2.0), used as the Contraction Hierarchies
+│                                baseline that COSMOS is benchmarked against.
+├── datasets/                    Road network datasets and a format conversion script
+└── go.work                      Go workspace file tying the go-spcs modules together
 ```
 
 ## Getting started
