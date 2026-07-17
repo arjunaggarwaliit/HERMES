@@ -28,7 +28,7 @@ Static preprocessing does not handle networks that change over time, for example
 Road networks are modeled as directed, weighted graphs: intersections and geographic points are vertices, road segments are edges, and each edge is weighted by a cost metric such as distance or travel time.
 
 <p align="center">
-  <img src="docs/Preprocessing-and-average-query-time-performance-for-algorithms-with-available.jpg" alt="HERMES Architecture" width="900">
+  <img src="docs/Preprocessing-and-average-query-time-performance-for-algorithms-with-available.jpg" alt="HERMES Architecture" width="500">
 </p>
 
 ## How HERMES works
