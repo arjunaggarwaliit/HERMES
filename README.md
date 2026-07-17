@@ -1,4 +1,4 @@
-# HERMES: Hierarchical Efficient Routing and Modular Evolution System
+# HERMES: Hierarchical Engine for Real-time Modular Execution of Scalable Shortest-Path Queries
 
 HERMES is a system for computing shortest paths and processing real-time updates on large, dynamic road networks. It combines hierarchical graph partitioning, a shortcut network overlay, and a concurrency control scheme so that routing queries and network updates can run at the same time without blocking each other or producing inconsistent results.
 
