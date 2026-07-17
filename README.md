@@ -27,6 +27,10 @@ Static preprocessing does not handle networks that change over time, for example
 
 Road networks are modeled as directed, weighted graphs: intersections and geographic points are vertices, road segments are edges, and each edge is weighted by a cost metric such as distance or travel time.
 
+<p align="center">
+  <img src="docs/Preprocessing-and-average-query-time-performance-for-algorithms-with-available.jpg" alt="HERMES Architecture" width="900">
+</p>
+
 ## How HERMES works
 
 HERMES is structured around five stages: an offline partitioning phase, a hierarchy and shortcut-network construction phase, an online routing phase, an online update phase, and a concurrency control layer that lets the last two run safely at the same time.
