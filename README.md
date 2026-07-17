@@ -2,7 +2,7 @@
 
 HERMES is a system for computing shortest paths and processing real-time updates on large, dynamic road networks. It combines hierarchical graph partitioning, a shortcut network overlay, and a concurrency control scheme so that routing queries and network updates can run at the same time without blocking each other or producing inconsistent results.
 
-This repository contains multiple implementations of the core algorithms (Go, Java, C++), a vendored Rust baseline used for comparison, datasets used for testing, and the analysis scripts used to produce the performance results described in the accompanying report.
+This repository contains multiple implementations of the core algorithms (Go, Java, C++), a vendored Rust baseline used for comparison, datasets used for testing, and the analysis scripts used to produce the performance results.
 
 ## Table of contents
 
