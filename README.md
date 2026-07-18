@@ -36,7 +36,7 @@ Road networks are modeled as directed, weighted graphs: intersections and geogra
 HERMES is structured around five stages: an offline partitioning phase, a hierarchy and shortcut-network construction phase, an online routing phase, an online update phase, and a concurrency control layer that lets the last two run safely at the same time.
 
 <p align="center">
-  <img src="diagrams/HERMES_Architecture.png" alt="HERMES Architecture" width="800">
+  <img src="diagrams/HERMES_Architecture_Updated.png" alt="HERMES Architecture" width="800">
 </p>
 
 ### 1. Partitioning: Natural Cuts Based Connectivity Clustering (NCCC)
